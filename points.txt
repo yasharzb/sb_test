@@ -1,0 +1,10 @@
+bean
+    not DTO (data transfer object)
+    .   Entity (Serialized object | persist in the DB)
+    .   Singleton (Component)
+        -   Configuration
+        -   Service
+        -   Controller/RestController
+        -   Repository
+REST Arch
+    .   Postman & Insomnia
