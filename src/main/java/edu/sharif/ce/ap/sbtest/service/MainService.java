@@ -16,9 +16,10 @@ public class MainService {
     private StudentRepository studentRepository;
 
     @PostConstruct
-    public void setup(){
+    public void setup() {
         System.out.println("Hey");
     }
+
     public void register(int id, int studentId, String name, String bio) {
         Student student = new Student(id, studentId, name, bio);
         studentRepository.save(student);
@@ -35,6 +36,6 @@ public class MainService {
 
     public StudentDTO showInfo(int studentId) {
         Student student = studentRepository.findByStudentId(studentId);
-        return new StudentDTO(student.getStudentId(), student.getName(), student.getBio());
+        return new StudentDTO(student.getId(), student.getStudentId(), student.getName(), student.getBio());
     }
 }
